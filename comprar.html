@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+   <head>
+  <meta charset="UTF-8">
+  <title>Esencias Cafeteras</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-esencia-cafetera.jpeg
+</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compra de Paquetes - Esencia Cafetera</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script defer src="script.js"></script>
+</head>
+<body>
+  <header>
+    <img src="img/logo-esencia-cafetera.jpeg" alt="Logo Esencia Cafetera" class="icono-taza" />
+    <h1>🛒 Compra tu experiencia cafetera</h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="quienes.html">¿Quiénes somos?</a>
+      <a href="mision y vision.html">Misión y Visión</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="comprar.html">Comprar</a>
+      
+    </nav>
+  </header>
+
+  <section class="paquetes">
+    <div class="paquete">
+      <h2>☕ Paquete 1: Hacienda Ceylán</h2>
+      <p>Incluye alojamiento, alimentación completa, experiencia cafetera y cata.</p>
+      <p><strong>$300.000 COP</strong></p>
+      <button onclick="mostrarFormulario('Hacienda Ceylán')">Comprar ahora 🛍️</button>
+    </div>
+    <div class="paquete">
+      <h2>☕ Paquete 2: Escapadas Cafeteras</h2>
+      <p>Pasadía con recorrido, cata y almuerzo típico.</p>
+      <p><strong>$150.000 COP</strong></p>
+      <button onclick="mostrarFormulario('Escapadas Cafeteras')">Comprar ahora 🛍️</button>
+    </div>
+    <div class="paquete">
+      <h2>☕ Paquete 3: Viotá Tobogán</h2>
+      <p>2 días, alojamiento, alimentación y actividades culturales.</p>
+      <p><strong>$350.000 COP</strong></p>
+      <button onclick="mostrarFormulario('Viotá Tobogán')">Comprar ahora 🛍️</button>
+    </div>
+  </section>
+
+  <section class="formulario-compra oculto" id="formularioCompra">
+    <h3>💳 Finaliza tu compra</h3>
+    <form onsubmit="return validarPago()">
+      <input type="hidden" id="paqueteSeleccionado" name="paquete">
+      <label>Nombre completo:<br>
+        <input type="text" id="nombre" required>
+      </label><br>
+      <label>Número de tarjeta 💳:<br>
+        <input type="text" id="tarjeta" maxlength="16" required>
+      </label><br>
+      <label>Tipo de tarjeta:<br>
+        <select id="tipoTarjeta" required>
+          <option value="">Seleccionar</option>
+          <option value="Crédito">Crédito</option>
+          <option value="Débito">Débito</option>
+        </select>
+      </label><br>
+      <label>Banco:<br>
+        <select id="banco" required>
+          <option value="">Seleccionar</option>
+          <option value="Bancolombia">Bancolombia</option>
+          <option value="Davivienda">Davivienda</option>
+          <option value="Nequi">Nequi</option>
+        </select>
+      </label><br>
+      <label>Fecha de ida:<br>
+        <input type="date" id="fechaIda" required>
+      </label><br>
+      <label>Fecha de regreso:<br>
+        <input type="date" id="fechaRegreso" required>
+      </label><br>
+      <button type="submit">Confirmar pago ✅</button>
+    </form>
+    <div id="mensajeCompra"></div>
+  </section>
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PQR - Esencia Cafetera</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    .formulario-pqr {
+        background-color: rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: -3px 2px 20px 3px rgb(169 11 243);
+    }
+    .formulario-pqr h2 {
+      text-align: center;
+      color: #e4dcd6;
+    }
+    .formulario-pqr input,
+    .formulario-pqr textarea,
+    .formulario-pqr select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .formulario-pqr button {
+      background-color: rgb(169 11 243);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+   <section class="formulario-pqr">
+    <h2>✉️ Escríbenos tu mensaje</h2>
+    <form onsubmit="return enviarPQR()">
+      <input type="text" id="nombrePqr" placeholder="Tu nombre" required />
+      <input type="email" id="correoPqr" placeholder="Tu correo electrónico" required />
+      <select id="tipoPqr" required>
+        <option value="">Seleccionar tipo</option>
+        <option value="Pregunta">Pregunta</option>
+        <option value="Queja">Queja</option>
+        <option value="Reclamo">Reclamo</option>
+      </select>
+      <textarea id="mensajePqr" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar mensaje 📩</button>
+    </form>
+    <div id="respuestaPqr" style="margin-top:1rem;"></div>
+  </section>
+
+  <script>
+    function enviarPQR() {
+      const nombre = document.getElementById('nombrePqr').value.trim();
+      const correo = document.getElementById('correoPqr').value.trim();
+      const tipo = document.getElementById('tipoPqr').value;
+      const mensaje = document.getElementById('mensajePqr').value.trim();
+      const respuesta = document.getElementById('respuestaPqr');
+
+      if (!nombre || !correo || !tipo || !mensaje) {
+        respuesta.innerHTML = '<p style="color: red;">❌ Por favor, completa todos los campos.</p>';
+        return false;
+      }
+
+      respuesta.innerHTML = '<p style="color: green;">✅ ¡Tu mensaje ha sido enviado correctamente! Gracias por escribirnos.</p>';
+      return false;
+    }
+  </script>
+  
+  <footer>
+    <div class="footer-contenido">
+        <p>© 2025 Esencia Cafetera | Turismo cultural del café</p>
+
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/esencias_cafeteras01?igsh=MXdsczZ5N2xqaW91bg==" target="_blank">
+                <img src="img/icono-instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/share/16zAd32ZpE/?mibextid=wwXIfr" target="_blank">
+                <img src="img/icono-facebook.png" alt="Facebook">
+            </a>
+            <a href="mailto:escencia.cafetera01@gmail.com">
+                <img src="img/icono-gmail.png" alt="Correo">
+            </a>
+        </div>
+
+        <div class="mapa-boton">
+            <a href="https://www.google.com/maps/place/Viotá,+Cundinamarca,+Colombia/" target="_blank" class="btn-mapa">
+                📍 Ubícanos
+            </a>
+        </div>
+    </div>
+</footer>

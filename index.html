@@ -1,0 +1,169 @@
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <head>
+  <meta charset="UTF-8">
+  <title>Esencias Cafeteras</title>
+  <link rel="stylesheet" href="estilos.css">
+
+  <!-- Favicon -->
+  <link rel="icon" type="image/png" href="img/logo-esencia-cafetera.jpeg">
+</head>
+
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Esencia Cafetera</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <script defer src="slider.js"></script>
+</head>
+<body>
+   <header>
+    <img src="img/logo-esencia-cafetera.jpeg" alt="Logo Esencia Cafetera" class="icono-taza" />
+    <h1>Bienvenidos a <span class="resaltado">Esencia Cafetera</span></h1>
+    <nav>
+      <a href="index.html">Inicio</a>
+      <a href="quienes.html">¿Quiénes somos?</a>
+      <a href="mision y vision.html">Misión y Visión</a>
+      <a href="paquetes.html">Paquetes</a>
+      <a href="comprar.html">Comprar</a>
+     
+        </nav>
+  </header>
+<section class="inicio">
+  <div class="inicio-contenido">
+    <h1>☕ Descubre la magia del café en <span class="resaltado">Viotá 🇨🇴</span></h1>
+    <p>
+      Explora fincas cafeteras, participa en catas, conoce el proceso del grano y relájate en paisajes naturales únicos.  
+      Sumérgete en esta cultura y respira el verdadero aroma de Colombia. 🌿
+    </p>
+
+    <div class="inicio-detalles">
+      <p>🧘 <strong>Bienestar:</strong> yoga, caminatas ecológicas y baños en quebradas naturales.</p>
+      <p>🚌 <strong>Viaje:</strong> transforma tu fin de semana en una aventura cafetera inolvidable.</p>
+    </div>
+
+    <h2>🌿 Viotá, el corazón cafetero de Cundinamarca</h2>
+    <p>
+      Viotá es un municipio encantador ubicado en la provincia del Tequendama. Rodeado de montañas verdes, cafetales, ríos y senderos naturales,  
+      es el destino perfecto para el turismo sostenible y cultural. 🌱
+    </p>
+    <p>
+      Participa en talleres, rutas del café, mercados locales y saborea platos típicos campesinos con productos de la región.  
+      <strong>Viotá te espera con los brazos abiertos. 💚</strong>
+    </p>
+    <img src="img/cafetero.jpeg" alt="Café colombiano" class="imagen-img">
+  </div>
+</section>
+
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>PQR - Esencia Cafetera</title>
+  <link rel="stylesheet" href="estilos.css" />
+  <style>
+    .formulario-pqr {
+        background-color: rgba(0, 0, 0, 0.8);
+    max-width: 600px;
+    margin: 2rem auto;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: -3px 2px 20px 3px rgb(169 11 243);
+    }
+    .formulario-pqr h2 {
+      text-align: center;
+      color: #e4dcd6;
+    }
+    .formulario-pqr input,
+    .formulario-pqr textarea,
+    .formulario-pqr select {
+      width: 100%;
+      margin-bottom: 1rem;
+      padding: 0.5rem;
+      border-radius: 6px;
+      border: 1px solid #ccc;
+    }
+    .formulario-pqr button {
+      background-color: rgb(169 11 243);
+      color: white;
+      border: none;
+      padding: 0.7rem 1.5rem;
+      font-size: 1rem;
+      border-radius: 5px;
+      cursor: pointer;
+    }
+  </style>
+</head>
+<body>
+   <section class="formulario-pqr">
+    <h2>✉️ Escríbenos tu mensaje</h2>
+    <form onsubmit="return enviarPQR()">
+      <input type="text" id="nombrePqr" placeholder="Tu nombre" required />
+      <input type="email" id="correoPqr" placeholder="Tu correo electrónico" required />
+      <select id="tipoPqr" required>
+        <option value="">Seleccionar tipo</option>
+        <option value="Pregunta">Pregunta</option>
+        <option value="Queja">Queja</option>
+        <option value="Reclamo">Reclamo</option>
+      </select>
+      <textarea id="mensajePqr" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
+      <button type="submit">Enviar mensaje 📩</button>
+    </form>
+    <div id="respuestaPqr" style="margin-top:1rem;"></div>
+  </section>
+
+  <script>
+    function enviarPQR() {
+      const nombre = document.getElementById('nombrePqr').value.trim();
+      const correo = document.getElementById('correoPqr').value.trim();
+      const tipo = document.getElementById('tipoPqr').value;
+      const mensaje = document.getElementById('mensajePqr').value.trim();
+      const respuesta = document.getElementById('respuestaPqr');
+
+      if (!nombre || !correo || !tipo || !mensaje) {
+        respuesta.innerHTML = '<p style="color: red;">❌ Por favor, completa todos los campos.</p>';
+        return false;
+      }
+
+      respuesta.innerHTML = '<p style="color: green;">✅ ¡Tu mensaje ha sido enviado correctamente! Gracias por escribirnos.</p>';
+      return false;
+    }
+  </script>
+</body>
+</html>
+
+
+
+
+
+
+
+   <footer>
+    <div class="footer-contenido">
+        <p>© 2025 Esencia Cafetera | Turismo cultural del café</p>
+
+        <div class="redes-sociales">
+            <a href="https://www.instagram.com/esencias_cafeteras01?igsh=MXdsczZ5N2xqaW91bg==" target="_blank">
+                <img src="img/icono-instagram.jpg" alt="Instagram">
+            </a>
+            <a href="https://www.facebook.com/share/16zAd32ZpE/?mibextid=wwXIfr" target="_blank">
+                <img src="img/icono-facebook.png" alt="Facebook">
+            </a>
+            <a href="mailto:escencia.cafetera01@gmail.com">
+                <img src="img/icono-gmail.png" alt="Correo">
+            </a>
+        </div>
+
+        <div class="mapa-boton">
+            <a href="https://www.google.com/maps/place/Viotá,+Cundinamarca,+Colombia/" target="_blank" class="btn-mapa">
+                📍 Ubícanos
+            </a>
+        </div>
+    </div>
+</footer>
+</body>
+</html>
